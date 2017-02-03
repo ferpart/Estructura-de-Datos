@@ -1,4 +1,4 @@
-package tarea1;
+package tarea;
 
 public class Funcion {
 
