@@ -1,4 +1,4 @@
-package ruleta_2;
+package ruletas;
 
 import javax.swing.JOptionPane;
 import imports.Queue;
