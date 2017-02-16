@@ -1,3 +1,4 @@
+package imports;
 
 public interface IQueue<E> {
 	public boolean isEmpty();
