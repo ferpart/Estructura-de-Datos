@@ -20,6 +20,7 @@ public class Queue_ruleta {
 			int num = x+1;
 			String num_queue = JOptionPane.showInputDialog("Esctribe la letra # " + num);
 			fila.enqueue(num_queue);
+			
 		}
 		String resfinal="[";
 		while(!fila.isEmpty()){
