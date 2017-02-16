@@ -1,4 +1,4 @@
-package cosas_humberto;
+package imports;
 /*
  * IQueue.java
  * 
@@ -28,5 +28,6 @@ public interface IQueue<E> {
 	public void enqueue(E data);
 	public E dequeue();
 	public E peek();
+	public int size();
 }
 

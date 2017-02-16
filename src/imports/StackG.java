@@ -1,8 +1,8 @@
-package cosas_humberto;
+package imports;
 
 import java.util.EmptyStackException;
 
-import ruleta_2.Node;
+import imports.Node;
 
 public class StackG<E> implements IStack<E> {
 	private Node<E> lastNode;

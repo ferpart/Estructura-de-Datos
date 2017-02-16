@@ -1,13 +1,13 @@
-package linked_list_humberto;
+package imports;
 
 import java.util.NoSuchElementException;
 
-public class SLinkedList<E> implements LinkList<E> {
+public class LinkedList<E> implements LinkList<E> {
 	
 	private Node<E> firstNode;
 	private int size;
 	
-	public SLinkedList (){
+	public LinkedList (){
 		firstNode=null;
 		size=0;
 	}
@@ -22,7 +22,7 @@ public class SLinkedList<E> implements LinkList<E> {
 	
 	public E getFirst(){
 		if(firstNode != null){
-			firstNode.getData();
+			return firstNode.getData();
 		}
 		else{
 			throw new NoSuchElementException ("La lista se encuentra vacia");
@@ -30,14 +30,14 @@ public class SLinkedList<E> implements LinkList<E> {
 	}
 	
 	public void addFirst(E data){
-		this.firstNode=new Node(data,this.firstNode);
+		this.firstNode=new Node<E>(data,this.firstNode);
 		this.size++;
 	}
 	
 	public boolean add(int index, E data){
 		if(index<0||index>this.size){
-			throw new IndexOutOfBoundsException("Indice no válido");
-			return false;
+			throw new IndexOutOfBoundsException("Indice no valido");
+			//return false;
 		}
 		if(index==0){
 			addFirst(data);
@@ -51,12 +51,21 @@ public class SLinkedList<E> implements LinkList<E> {
 				ant=ant.getNext();
 				aux++;
 			}
-			Node<E> nuevo=new Node();
+			Node<E> nuevo=new Node<E>();
 			ant.setNext(nuevo);
 			size++;
 			return true;
 		}
+	}
 	
+	public E remove(int index) {
+		if(index<0||index>this.size|| index==0){
+			throw new IndexOutOfBoundsException("Indice no valido");
+		}
+		else{
+		
+		return null;
+		}
 	}
 	
 	public boolean contains(E item){
@@ -82,7 +91,7 @@ public class SLinkedList<E> implements LinkList<E> {
 	
 	public E get (int index){
 		if(index<0||index>=this.size){
-			throw new IndexOutOfBoundsException("Indice no válido");
+			throw new IndexOutOfBoundsException("Indice no valido");
 		}
 		Node<E> n;
 		int aux=0;

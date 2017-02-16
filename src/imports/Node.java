@@ -1,4 +1,4 @@
-package cosas_humberto;
+package imports;
 
 public class Node<E> {
 	private E data;

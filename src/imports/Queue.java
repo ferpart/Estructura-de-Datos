@@ -1,13 +1,13 @@
-package cosas_humberto;
+package imports;
 
 import java.util.NoSuchElementException;
 
-public class QueueG<E> implements IQueue<E>{
+public class Queue<E> implements IQueue<E>{
 	private Node<E> firstNode,
 					lastNode;
 	private int size;
 	
-	public QueueG(){
+	public Queue(){
 		firstNode=null;
 		lastNode=null;
 		size=0;
@@ -50,6 +50,14 @@ public class QueueG<E> implements IQueue<E>{
 		}
 		return firstNode.getData();
 	}
+	
+	public int size(){ 
+		
+			return size;
+			}
+		
+		
+	
 	
 }
 

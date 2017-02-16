@@ -1,4 +1,4 @@
-package linked_list_humberto;
+package imports;
 
 public interface LinkList<E> {
 	

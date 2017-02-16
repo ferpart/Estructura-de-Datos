@@ -1,6 +1,6 @@
 package cosas_vistas_en_clase;
 
-public class test {
+public class InsertionSortAlgorithm {
 
 	public static void main(String[] args) {
 		
