@@ -7,11 +7,10 @@ public class Queue_ruleta {
 
 	public static void main(String[] args) {
 		Queue<String> queue_test= new Queue<String>() ;
-		int tiempo = 0;
-		anadir(queue_test, tiempo);
+		anadir(queue_test);
 	}
 	
-	public static void anadir(Queue<String> fila, int y){
+	public static void anadir(Queue<String> fila){
 		
 		String numero = JOptionPane.showInputDialog("Escribe el numero de objetos");
 		int numero_int = Integer.parseInt(numero);

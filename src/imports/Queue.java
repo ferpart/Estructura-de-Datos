@@ -52,7 +52,6 @@ public class Queue<E> implements IQueue<E>{
 	}
 	
 	public int size(){ 
-		
 			return size;
 			}
 		
