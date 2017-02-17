@@ -1,49 +1,39 @@
 package ruletas;
 
-import imports.LinkedList;
-import imports.JOtransform;
-import javax.swing.JOptionPane;
+import imports.SLinkedList; //Importar linked list creada en laboratorio
+import imports.Joptions; //importar clase creada para sesplegar una ventana que pida un numero y se transforme de string a int
 
-public class LinkedList_ruleta {
+public class LinkedList_ruleta { //Clase Principal
 
-	public static void main(String[] args) {
-		LinkedList<Integer> linked_list=new LinkedList<Integer>();
-		int num_elementos=0;
-		int num_paso=0;
-		anadir(linked_list, elementos(num_elementos, num_paso));
+	public static void main(String[] args) { //main
+		SLinkedList<Integer> linked_list=new SLinkedList<Integer>(); //Creacion de la lista ligada que recibira parametros "Int"		
+		anadir(linked_list, elementos(0,0));
 	}
 	
-	public static void anadir(LinkedList<Integer> linked_list, int numElementos){
+	public static void anadir(SLinkedList<Integer> linked_list, int elementos){
 		
-		
-		if (!linked_list.isEmpty()){
-			linked_list.addFirst(elementos(1, 0));
-		}
-		for (int x=0; x<numElementos; x++){
+		for (int x=0; x<elementos; x++){
 			int paso=x+1;
-			linked_list.add(x, elementos(2,paso));
+			linked_list.add(x, elementos(1,paso));
 		}
 		
-		//JOptionPane.showMessageDialog(null, "El elemento #"+ numElementos + " de la lista es:\n" + linked_list.get(elementos(3, numElementos)) );
-		resp_final(linked_list, numElementos);
+		int obtener_indice=linked_list.get((elementos(2, elementos))-1);
+		
+		resp_final(obtener_indice, elementos);
 		
 			
 	}
 	
 	public static int elementos(int x, int y){
-		JOtransform<String> read_input= new JOtransform<String>();
+		Joptions<String> read_input= new Joptions<String>();
 		if (x==0){
-			return read_input.input_JO("Numero de elementos para lista ligada");
-		}
+			return read_input.inputInt_JO("Numero de elementos para lista ligada");
+		}	
 		else if (x==1){
-			return read_input.input_JO("Dame el elemento #1");
+			return read_input.inputInt_JO("Dame el elemento #"+ y);
 		}
-		
 		else if (x==2){
-			return read_input.input_JO("Dame el elemento #"+ y);
-		}
-		else if (x==3){
-			return read_input.input_JO("Dime el elemento a mostrar desde 1 a "+ y );
+			return read_input.inputInt_JO("Dime el elemento a mostrar desde 1 a "+ y );
 		}
 		
 		else {
@@ -52,8 +42,10 @@ public class LinkedList_ruleta {
 		
 	}
 	
-	public static void resp_final(LinkedList<Integer> linked_list, int numElementos){
-		JOptionPane.showMessageDialog(null, "El elemento #"+ numElementos + " de la lista es:\n" + linked_list.get((elementos(3, numElementos))-1) );
+	public static void resp_final(int obtener_indice, int elementos){
+		Joptions<String> message= new Joptions<String>();
+		message.msg_JO("El elemento #"+ elementos + " de la lista es:\n" + obtener_indice );
+		
 	}
 
 }

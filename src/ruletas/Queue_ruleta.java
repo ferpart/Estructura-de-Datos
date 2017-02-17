@@ -1,16 +1,16 @@
 package ruletas;
 
 import javax.swing.JOptionPane;
-import imports.Queue;
+import imports.GQueue;
 
 public class Queue_ruleta {
 
 	public static void main(String[] args) {
-		Queue<String> queue_test= new Queue<String>() ;
+		GQueue<String> queue_test= new GQueue<String>() ;
 		anadir(queue_test);
 	}
 	
-	public static void anadir(Queue<String> fila){
+	public static void anadir(GQueue<String> fila){
 		
 		String numero = JOptionPane.showInputDialog("Escribe el numero de objetos");
 		int numero_int = Integer.parseInt(numero);

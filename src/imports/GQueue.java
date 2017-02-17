@@ -2,12 +2,12 @@ package imports;
 
 import java.util.NoSuchElementException;
 
-public class Queue<E> implements IQueue<E>{
+public class GQueue<E> implements IQueue<E>{
 	private Node<E> firstNode,
 					lastNode;
 	private int size;
 	
-	public Queue(){
+	public GQueue(){
 		firstNode=null;
 		lastNode=null;
 		size=0;

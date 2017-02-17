@@ -2,12 +2,12 @@ package imports;
 
 import java.util.NoSuchElementException;
 
-public class LinkedList<E> implements LinkList<E> {
+public class SLinkedList<E> implements LinkList<E> {
 	
 	private Node<E> firstNode;
 	private int size;
 	
-	public LinkedList (){					//Constructor por default
+	public SLinkedList (){					//Constructor por default
 		firstNode=null;						//Primer nodo vacio
 		size=0;								//Tamaño 0
 	}
