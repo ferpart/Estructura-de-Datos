@@ -77,7 +77,7 @@ public class SLinkedList<E> implements LinkList<E> {
 	}
 	
 	public E get (int index){		//Accede al objeto dentro de un nodo en cualquier posicion existente de la lista
-		if(index<0||index>=this.size){
+		if(index<0||index>this.size){
 			throw new IndexOutOfBoundsException("Indice no valido");
 		}
 		Node<E> n;
@@ -117,7 +117,7 @@ public class SLinkedList<E> implements LinkList<E> {
 			StringBuilder sb = new StringBuilder();
 			Node<E> actual = this.firstNode;
 			for(int i=0; i<this.size; i++){
-				sb.append("["+actual.getData()+"] ");
+				sb.append(actual.getData()+"\n");
 				actual=actual.getNext();
 			}
 			return sb.toString();
