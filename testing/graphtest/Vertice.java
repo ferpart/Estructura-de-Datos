@@ -15,7 +15,7 @@ public class Vertice {
 	}
 	
 	public Vertice(String nombre){
-		this.adyacentes=new LinkedList();
+		this.adyacentes=new LinkedList<Arista>();
 		this.nombre=nombre;
 	}
 	

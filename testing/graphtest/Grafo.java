@@ -39,7 +39,7 @@ public class Grafo {
 		for(Map.Entry<String,Vertice> v: this.vertices.entrySet()){
 			Vertice vertice=v.getValue();
 			vertice.marcado=0;
-			vertice.distancia=this.INFINITO;
+			vertice.distancia=Grafo.INFINITO;
 			vertice.anterior=null;
 		}
 		origin.marcado=1;
@@ -73,7 +73,7 @@ public class Grafo {
 		for(Map.Entry<String, Vertice> u: this.vertices.entrySet()){
 			Vertice vertice = u.getValue();
 			vertice.marcado = 0;
-			vertice.distancia = this.INFINITO;
+			vertice.distancia = Grafo.INFINITO;
 			vertice.anterior = null;
 		}
 		int time = 0;
